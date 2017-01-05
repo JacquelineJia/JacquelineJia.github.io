@@ -1,0 +1,49 @@
+.background-image {
+  background: url(images/pink-sky-flip.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 800px;
+  z-index: -1;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s;
+}
+
+.gray {
+  -webkit-filter: grayscale(100%);
+}
+
+.content {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+}
+
+.hide {
+
+}
+
+.menu {
+  position:fixed;
+  /*display: block;*/
+  /*transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 3s;*/
+}
+
+.name-header {
+  letter-spacing: 0.3px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.hover:hover {
+  opacity: 0.6;
+}
+
+.pink {
+  color: rgb(255, 153, 204);
+}
+
+
+
+.purple {
+  color: rgb(43, 10, 91);
+  transition: all cubic-bezier(0.45, 0.56, 0.55, 0.94) 3s;
+}
