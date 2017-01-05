@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngAnimate']);
 
 app.controller('myCtrl', function ($scope) {
-  $scope.backgroundState= "background-image gray";
+  $scope.backgroundState= "background-image grayscale";
   $scope.headerState= "name-header pink hover";
-  $scope.menuState = "menu hide";
+  $scope.menuState = "menu hid";
 });
