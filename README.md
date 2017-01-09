@@ -3,6 +3,7 @@ A website about Jacqueline Jia.
 
 --not complete--
 
-Using: AngularJS, Express, NodeJS, JavaScript, CSS, HTML
+Using: AngularJS, Express, NodeJS, MongoDB, JavaScript, CSS, HTML
 
-Planning to use: MongoDB
+Currently comments only work on localhost.
+TO DO: set up server using  mLab, and Heroku or DigitalOcean.

@@ -4,6 +4,12 @@ var mongojs = require('mongojs');
 var db = mongojs('commentlist', ['commentlist']);
 var bodyParser = require('body-parser');
 
+// TO DO LATER: get comments working on server
+// var mongodb = require('mongodb')
+// var uri = 'mongodb://JacquelineJia:Jaciscool@ds159208.mlab.com:59208/commentlist';
+// mongodb.MongoClient.connect(uri, function(err, db){
+// })
+
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 

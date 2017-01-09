@@ -36,19 +36,59 @@
           <tr>
             <th>Name</th>
             <th>Comment</th>
-            <th>Action</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td><input class="form-control" ng-model="comment.name"></td>
             <td><input class="form-control" ng-model="comment.comment"></td>
             <td><button class="btn btn-primary" ng-click="addComment()">Post</botton></td>
-
-          </tr>
+          </tr> -->
           <tr ng-repeat="comment in commentlist | orderBy:'-'">
             <td>{{comment.name}}</td>
             <td>{{comment.comment}}</td>
+          </tr>
+          <tr>
+            <td>Anonymous</td>
+            <td>I am cool</td>
+          </tr>
+          <tr>
+            <td>Anonymous</td>
+            <td>*Jacqueline is cool</td>
+          </tr>
+          <tr>
+            <td>Anonymous</td>
+            <td>Why is there no delete button???</td>
+          </tr>
+          <tr>
+            <td>Staff 1</td>
+            <td>There are no more comment spots available at this time, please try again later.</td>
+          </tr>
+          <tr>
+            <td>Iam Angry</td>
+            <td>I have been waiting years to comment, but the comments section is still full. PLEASE FIX THIS</td>
+          </tr>
+          <tr>
+            <td>Staff 2</td>
+            <td>New comment spot just filled, no more spots available at this time.</td>
+          </tr>
+          <tr>
+            <td>Super Angry</td>
+            <td>WHY DID NO ONE TELL ME THERE WAS AN EMPTY SPOT LEFT BEFORE I COMMENTED</td>
+          </tr>
+          <tr>
+            <td>{{commentName}}</td>
+            <td>{{commentComment}}</td>
+          </tr>
+          <tr>
+            <td><input class="form-control" ng-model="commentName"></td>
+            <td><input class="form-control" ng-model="commentComment"></td>
+            <td><button class="btn btn-primary" ng-click="addCommentFull()">Post</botton></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{addCommentMessage}}</td
           </tr>
         </tbody>
       </table>

@@ -22,4 +22,16 @@ app.controller('myCtrl', function ($scope, $http) {
     });
   };
 
+  $scope.commentName = '';
+  $scope.commentComment = '';
+  $scope.addCommentMessage = '';
+
+  $scope.addCommentFull = function() {
+    if ($scope.commentName == '' || $scope.commentComment == '') {
+      $scope.addCommentMessage = 'Name and Comment cannot be empty';
+    } else {
+      $scope.addCommentMessage = '';
+    }
+  };
+
 });
