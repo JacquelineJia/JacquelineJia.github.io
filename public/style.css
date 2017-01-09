@@ -50,7 +50,7 @@
 .hid {
   display: none;
   visibility: hidden;
-  transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 3s;s
+  transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 3s;
 }
 
 .name-header {

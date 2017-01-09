@@ -3,20 +3,18 @@
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/public/style.css">
+<link rel="stylesheet" type="text/css" href="public/style.css">
 
   <title> Jacqueline Jia </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="myCtrl">
 
   <div class="background-image">
   <div class="content">
@@ -38,8 +36,21 @@
           <tr>
             <th>Name</th>
             <th>Comment</th>
+            <th>Action</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td><input class="form-control" ng-model="comment.name"></td>
+            <td><input class="form-control" ng-model="comment.comment"></td>
+            <td><button class="btn btn-primary" ng-click="addComment()">Post</botton></td>
+
+          </tr>
+          <tr ng-repeat="comment in commentlist | orderBy:'-'">
+            <td>{{comment.name}}</td>
+            <td>{{comment.comment}}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
@@ -47,7 +58,7 @@
   </div>
 </div>
 
-<script src="myApp.js"></script>
+<script src="public/myApp.js"></script>
 
 </body>
 </html>
