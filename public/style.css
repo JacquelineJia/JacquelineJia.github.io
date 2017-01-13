@@ -27,6 +27,8 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
+  max-height: 46px;
   z-index: 10;
 }
 
@@ -48,9 +50,11 @@
 }
 
 .hid {
-  display: none;
-  visibility: hidden;
-  transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 3s;
+  height: 0;
+}
+
+.transitionFast {
+  transition: 0.5s ease;
 }
 
 .name-header {
@@ -75,6 +79,7 @@
 
 .hover:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .pink {
@@ -88,3 +93,72 @@
 .transition {
   transition: all cubic-bezier(0.45, 0.56, 0.55, 0.94) 3s;
 }
+
+
+div.img:hover {
+  /*opacity: 0.7;
+  cursor: pointer;*/
+}
+
+.imgContainer img {
+  /*width: 100%;*/
+  height: 100%;
+  opacity: 0.7;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+
+.imgContainer {
+  position: relative;
+  float: left;
+  /*width: auto;*/
+  height: 200px;
+  margin: 6px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.imgContainer:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.imgContainer:hover .imgMiddle {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.imgMiddle {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  background-color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 5px;
+
+  transition: all 0.2s;
+}
+
+/*
+@media only screen and (max-width: 700px){
+    .imgContainer {
+        width: 49%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .imgContainer {
+        width: 100%;
+    }
+}*/

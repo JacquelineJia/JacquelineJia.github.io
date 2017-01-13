@@ -3,7 +3,7 @@ var app = angular.module('myApp', ['ngAnimate']);
 app.controller('myCtrl', function ($scope, $http) {
   $scope.backgroundState= "background-image grayscale";
   $scope.headerState= "name-header pink hover";
-  $scope.menuState = "menu hid";
+  $scope.menuState = "menu hid transition";
 
   var refresh = function() {
     $http.get('/commentlist').then(function(response) {
@@ -30,7 +30,7 @@ app.controller('myCtrl', function ($scope, $http) {
     if ($scope.commentName == '' || $scope.commentComment == '') {
       $scope.addCommentMessage = 'Name and Comment cannot be empty';
     } else {
-      $scope.addCommentMessage = '';
+      $scope.addCommentMessage = 'There are no more comment spots available at this time, please try again later (when Jacqueline sets up a server).';
     }
   };
 
