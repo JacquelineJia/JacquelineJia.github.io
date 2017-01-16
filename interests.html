@@ -32,9 +32,9 @@
       <h1 class="purple">Jacqueline's Hobbies and Interests</h1>
 
         <div class="modal" ng-style="showModal && {'display':'block'}">
-          <span class="modalClose" ng-click="showModal=false">x</span>
+          <span class="modalClose" ng-click="showModal=false; setCaption('')">x</span>
           <img class="modalImg" ng-style="modalIsImg && {'display':'block'}" ng-src="{{modalImgAddress}}">
-          <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalImgAddress}}" type="video/mp4">
+          <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalImgAddress}}" type="video/mp4"></video>
           <div class="modalCaption">{{modalCaption}}</div>
         </div>
 
@@ -52,17 +52,17 @@
           </div>
         </div>
 
-        <div class="imgContainer" ng-click="setModal('public/images/juggling720.mp4', 'video'); setCaption('October 23, 2016')">
+        <div class="imgContainer" ng-click="setModal('public/images/juggling720.mp4', 'video')">
           <img src="public/images/juggling.jpg" height="200px">
           <div class="imgMiddle">
             <div class="imgText purple">Juggling</div>
           </div>
         </div>
 
-        <div class="imgContainer" ng-click="setModal('public/images/3Danimation.mp4', 'video'); setCaption('Created using Autodesk 3ds Max.')">
+        <div class="imgContainer" ng-click="setModal('public/images/3Danimation.mp4', 'video'); setCaption('Created using: Autodesk 3ds Max')">
           <img src="public/images/3Danimation.jpg" height="200px">
           <div class="imgMiddle">
-            <div class="imgText purple">3D animation</div>
+            <div class="imgText purple">3D Animation</div>
           </div>
         </div>
 
