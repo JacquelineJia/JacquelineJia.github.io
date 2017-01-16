@@ -7,7 +7,6 @@ app.controller('myCtrl', function ($scope, $http) {
 
   $scope.modalImgAddress = "";
   $scope.modalCaption = "";
-  // $scope.modalState = "modal";
   $scope.showModal = false;
   $scope.modalIsImg = true;
   $scope.modalIsVideo = false;

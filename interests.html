@@ -34,7 +34,7 @@
         <div class="modal" ng-style="showModal && {'display':'block'}">
           <span class="modalClose" ng-click="showModal=false">x</span>
           <img class="modalImg" ng-style="modalIsImg && {'display':'block'}" ng-src="{{modalImgAddress}}">
-          <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls loop ng-src="{{modalImgAddress}}" type="video/mp4">
+          <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalImgAddress}}" type="video/mp4">
           <div class="modalCaption">{{modalCaption}}</div>
         </div>
 
