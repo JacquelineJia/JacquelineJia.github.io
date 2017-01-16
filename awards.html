@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+<link rel="stylesheet" type="text/css" href="public/style.css">
+
+  <title> Jacqueline Jia </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <div class="background-image">
+  <div class="content">
+
+    <div class="menu">
+      <nav>
+        <a href="">Projects</a></li>
+        <a class = "active" href="awards.html">Awards</a></li>
+        <a href="interests.html">Interests</a></li>
+        <a href="comments.html">Comments</a></li>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h1 class="purple">Jacqueline's Achievements and Awards</h1>
+
+        <div class="modal" ng-style="showModal && {'display':'block'}">
+          <span class="modalClose" ng-click="showModal=false">x</span>
+          <img class="modalImg" ng-src="{{modalImgAddress}}">
+          <div class="modalCaption">{{modalCaption}}</div>
+        </div>
+
+        <div class="imgContainer" ng-click="setModal('public/images/pink-sky-flip.jpg')">
+          <img src="public/images/pink-sky-flip.jpg" height="400px">
+          <div class="imgMiddle">
+            <div class="imgText purple">Award Here</div>
+          </div>
+        </div>
+
+        <div class="imgContainer" ng-click="setModal('public/images/test.jpg')">
+          <img src="public/images/test.jpg" height="200px">
+          <div class="imgMiddle">
+            <div class="imgText purple">Award Here</div>
+          </div>
+        </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+<script src="public/myApp.js"></script>
+
+</body>
+</html>

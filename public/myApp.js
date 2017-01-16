@@ -5,6 +5,27 @@ app.controller('myCtrl', function ($scope, $http) {
   $scope.headerState= "name-header pink hover";
   $scope.menuState = "menu hid transition";
 
+  $scope.modalImgAddress = "";
+  $scope.modalCaption = "";
+  // $scope.modalState = "modal";
+  $scope.showModal = false;
+  $scope.modalIsImg = true;
+  $scope.modalIsVideo = false;
+  $scope.setModal = function(img, format) {
+    $scope.modalImgAddress = img;
+    $scope.showModal = true;
+    if (format == 'video') {
+      $scope.modalIsImg = false;
+      $scope.modalIsVideo = true;
+    } else {
+      $scope.modalIsImg = true;
+      $scope.modalIsVideo = false;
+    }
+  };
+  $scope.setCaption = function(cap) {
+    $scope.modalCaption = cap;
+  };
+
   var refresh = function() {
     $http.get('/commentlist').then(function(response) {
       // console.log(response.data);

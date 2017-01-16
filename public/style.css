@@ -1,5 +1,5 @@
 .background-image {
-  background: url(images/pink-sky-flip.jpg) no-repeat center center fixed;
+  background: url(images/pink-sky.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 800px;
   z-index: -1;
@@ -41,10 +41,7 @@
   text-decoration: none;
 }
 
-.menu a:hover:not(.active) {
-  background-color: white;
-}
-
+.menu a:hover:not(.active),
 .active {
   background-color: white;
 }
@@ -149,16 +146,74 @@ div.img:hover {
   transition: all 0.2s;
 }
 
-/*
-@media only screen and (max-width: 700px){
-    .imgContainer {
-        width: 49%;
-        margin: 6px 0;
-    }
+.modal {
+  /*display: none;*/
+  position: fixed;
+  z-index: 11;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /*width: 100%;
+  height: 100%;*/
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: rgba(0,0,0,0.9);
 }
 
-@media only screen and (max-width: 500px){
-    .imgContainer {
-        width: 100%;
+.modalDisplay {
+  display: block;
+}
+
+.modalImg {
+  margin: auto;
+  display: none;
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+}
+
+.modalVideo {
+  margin: auto;
+  display: none;
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+}
+
+.modalCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modalClose {
+  position: fixed;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalClose:hover,
+.modalClose:focus {
+  color: #bbb;
+  cursor: pointer;
+}
+
+/* 100% Max Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modalImg {
+        max-width: 100%;
     }
-}*/
+}
