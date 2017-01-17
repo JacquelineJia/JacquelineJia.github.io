@@ -1,0 +1,122 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+<link rel="stylesheet" type="text/css" href="public/style.css">
+
+  <title> Jacqueline Jia </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="background-image" ng-app="myApp" ng-controller="myCtrl">
+
+  <!-- <div class="background-image"></div> -->
+  <div class="content">
+
+    <div class="menu">
+      <nav>
+        <a href="">Projects</a></li>
+        <a class = "active" href="other-skills.html">Other Skills</a></li>
+        <a href="comments.html">Comments</a></li>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h1 class="purple">Other Cool Skills Jacqueline has</h1>
+      <h5 class="purple">*not as cool as coding</h5>
+      <br/>
+      <h4 class="purple">Click on images for more information and achievements</h4>
+
+      <div class="modal" ng-style="showModal && {'display':'block'}">
+        <span class="modalClose" ng-click="showModal=false; setCaption('')">x</span>
+        <img class="modalImg" ng-style="modalIsImg && {'display':'block'}" ng-src="{{modalImgAddress}}">
+        <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalImgAddress}}" type="video/mp4"></video>
+        <div class="modalCaption">{{modalCaption}}</div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/chinese-dance-markham.jpg', 'img');
+          setCaption('Performance in Markham, ON - May 30, 2016
+          Jacqueline is on the very left. \n
+          Other performances:
+          Fan dance at Ottawa Chinese New Year Show - 2015
+          Mongolian dance at Ottawa Winterlude festival - around 2009')">
+        <img src="public/images/chinese-dance-markham.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Chinese Cultural Dance</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/juggling-short.mp4', 'video')">
+        <img src="public/images/juggling.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Juggling</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/3Danimation.mp4', 'video');
+          setCaption('Created using: Autodesk 3ds Max, Adobe Premiere Elements')">
+        <img src="public/images/3Danimation.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">3D Animation</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/fan.jpg', 'img');
+          setCaption('UW Magic Club Exec position: sept 2016 - present')">
+        <img src="public/images/fan.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Magic and Cardistry</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/badminton-mvp.jpg', 'img');
+          setCaption('Badminton MVP, Nepean High School - 2014-2015 \n
+          Board Wide Badminton Tournament, third place for mixed doubles - 2014
+          Board Wide Badminton Tournament, third place for mixed doubles - 2013')">
+        <img src="public/images/badminton-mvp.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Badminton</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/photography.jpg', 'img');
+          setCaption('UW Magic Club Fall 2016 \n
+          UW Magic Club Photographer: Sept 2016 - present
+          Gymnastic Competition Photographer: 2011 - 2016')">
+        <img src="public/images/photography.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Photography</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/cartwheel.mp4', 'video')">
+        <img src="public/images/cartwheel.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Cartwheels</div>
+        </div>
+      </div>
+
+      <div class="imgContainer" ng-click="setModal('public/images/test.jpg');
+          setCaption('Completed Royal Conservatory of Music Examination level 8 Practical + level 8 Theory')">
+        <img src="public/images/test.jpg">
+        <div class="imgMiddle">
+          <div class="imgText purple">Piano</div>
+        </div>
+      </div>
+
+    </div>
+    <br/>
+
+  </div>
+
+
+<script src="public/myApp.js"></script>
+
+</body>
+</html>

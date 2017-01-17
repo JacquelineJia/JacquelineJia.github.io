@@ -8,17 +8,17 @@ app.controller('myCtrl', function ($scope, $http) {
   $scope.modalImgAddress = "";
   $scope.modalCaption = "";
   $scope.showModal = false;
-  $scope.modalIsImg = true;
+  $scope.modalIsImg = false;
   $scope.modalIsVideo = false;
   $scope.setModal = function(img, format) {
     $scope.modalImgAddress = img;
     $scope.showModal = true;
+    $scope.modalIsImg = false;
+    $scope.modalIsVideo = false;
     if (format == 'video') {
-      $scope.modalIsImg = false;
       $scope.modalIsVideo = true;
-    } else {
+    } else if (format == 'img') {
       $scope.modalIsImg = true;
-      $scope.modalIsVideo = false;
     }
   };
   $scope.setCaption = function(cap) {
