@@ -1,5 +1,5 @@
 .background-image {
-  background: url(images/pink-sky.jpg) no-repeat center center fixed;
+  background: url(images/pink-flower-blue-good.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   z-index: -1;
@@ -58,20 +58,27 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-
-  -webkit-transform: translate(-50%, -75%);
-	-moz-transform: translate(-50%, -75%);
-	-ms-transform: translate(-50%, -75%);
-	-o-transform: translate(-50%, -75%);
-	transform: translate(-50%, -75%);
+  /*max-width: 100%;
+  max-height: 100%;*/
+  width: 666px;
+  height: 100px;
+/*background-color: black;*/
+  -webkit-transform: translate(-50%, -170px);
+	-moz-transform: translate(-50%, -170px);
+	-ms-transform: translate(-50%, -170px);
+	-o-transform: translate(-50%, -170px);
+	transform: translate(-50%, -170px);
 
   letter-spacing: 0.3px;
   font-size: 100px;
   text-align: center;
+}
+
+@media only screen and (max-width: 700px){
+    .name-header {
+        width: 500px;
+        /*height: 200px;*/
+    }
 }
 
 .hover:hover {
