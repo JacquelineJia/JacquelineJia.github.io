@@ -14,27 +14,44 @@
   <title> Jacqueline Jia </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body class="background-image" ng-app="myApp" ng-controller="myCtrl">
 
-
-  <div ng-class="backgroundState"></div>
+  <!-- <div class="background-image"></div> -->
   <div class="content">
 
-    <div ng-class="menuState">
+    <div class="menu">
       <nav>
-        <a href="projects.html">Projects</a></li>
+        <a class = "active" href="projects.html">Projects</a></li>
         <a href="other-skills.html">Other Skills</a></li>
         <a href="comments.html">Comments</a></li>
       </nav>
     </div>
 
-    <div>
-    <h1 ng-class="headerState" ng-click="backgroundState='background-image'; headerState='name-header purple transition'; menuState='menu transitionFast'">Jacqueline Jia</h1>
+    <div class="container">
+      <h1 class="purple">Some of Jacqueline's Projects</h1>
+      <h5 class="purple">sroll down to see the rest</h5>
+      <br/>
+
+      <h4 class="purple">WARNING this game make a lot of noise when you hover over the colours</h4>
+      <iframe class="game" src="public/Make-Noise/index.html" >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+
+      <p>  </p>
+      <br/>
+
+      <h4 class="purple">Take care of a little pet! More content to be added soon</h4>
+      <iframe class="game" src="public/Pet-Game/index.html" >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+
     </div>
+    <br/>
 
   </div>
 
-  <script src="public/myApp.js"></script>
+
+<script src="public/myApp.js"></script>
 
 </body>
 </html>
