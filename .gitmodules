@@ -1,0 +1,6 @@
+[submodule "public/Make-Noise"]
+	path = public/Make-Noise
+	url = https://github.com/JacquelineJia/Make-Noise.git
+[submodule "public/Pet-Game"]
+	path = public/Pet-Game
+	url = https://github.com/JacquelineJia/Pet-Game.git
