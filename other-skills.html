@@ -35,19 +35,20 @@
 
       <div class="modal" ng-style="showModal && {'display':'block'}">
         <span class="modalClose" ng-click="showModal=false; setCaption('')">x</span>
-        <img class="modalImg" ng-style="modalIsImg && {'display':'block'}" ng-src="{{modalImgAddress}}">
-        <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalImgAddress}}" type="video/mp4"></video>
+        <img class="modalImg" ng-style="modalIsImg && {'display':'block'}" ng-src="{{modalAddress}}">
+        <video class="modalVideo" ng-style="modalIsVideo && {'display':'block'}" controls ng-src="{{modalAddress}}" type="video/mp4"></video>
+        <iframe class="modalYoutube" ng-style="modalIsYoutube && {'display':'block'}" ng-src="{{modalAddress}}" allowfullscreen></iframe>
         <div class="modalCaption">{{modalCaption}}</div>
       </div>
 
-      <div class="imgContainer" ng-click="setModal('public/images/chinese-dance-tmp.mp4', 'video');
+      <div class="imgContainer" ng-click="setModal('https://youtube.com/embed/cycyxZfcGUY', 'youtube');
           setCaption('KWCSSA 2017 Cinese New Year Festival Gala: Year of the Rooster - Jan 24, 2017
-Jacqueline is on the very left. \n
+@1:25 Jacqueline is 4th from the left \n
 Other performances:
 Markham Performance - May 30, 2016
 Ottawa Chinese New Year Show, fan dance - 2015
 Ottawa Winterlude festival, Mongolian dance - around 2009')">
-        <img src="public/images/chinese-dance-tmp.jpg">
+        <img src="public/images/chinese-dance.jpg">
         <div class="imgMiddle">
           <div class="imgText purple">Chinese Cultural Dance</div>
         </div>

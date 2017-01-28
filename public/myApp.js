@@ -1,24 +1,30 @@
 var app = angular.module('myApp', ['ngAnimate']);
 
-app.controller('myCtrl', function ($scope, $http) {
+app.controller('myCtrl', function ($scope, $http, $sce) {
+
   $scope.backgroundState= "background-image grayscale";
   $scope.headerState= "name-header pink hover";
   $scope.menuState = "menu hid transition";
 
-  $scope.modalImgAddress = "";
+  $scope.modalAddress = "";
   $scope.modalCaption = "";
   $scope.showModal = false;
   $scope.modalIsImg = false;
   $scope.modalIsVideo = false;
-  $scope.setModal = function(img, format) {
-    $scope.modalImgAddress = img;
+  $scope.modalIsYoutube = false;
+  $scope.setModal = function(address, format) {
+    $scope.modalAddress = address;
     $scope.showModal = true;
     $scope.modalIsImg = false;
     $scope.modalIsVideo = false;
+    $scope.modalIsYoutube = false;
     if (format == 'video') {
       $scope.modalIsVideo = true;
     } else if (format == 'img') {
       $scope.modalIsImg = true;
+    } else if (format == 'youtube') {
+      $scope.modalIsYoutube = true;
+      $scope.modalAddress = $sce.trustAsResourceUrl(address);
     }
   };
   $scope.setCaption = function(cap) {
