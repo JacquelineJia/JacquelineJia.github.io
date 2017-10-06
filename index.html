@@ -16,7 +16,6 @@
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
 
-
   <div ng-class="backgroundState"></div>
   <div class="content">
 
@@ -28,9 +27,7 @@
       </nav>
     </div>
 
-    <div>
-    <h1 ng-class="headerState" ng-click="backgroundState='background-image'; headerState='name-header purple transition'; menuState='menu transitionFast'">Jacqueline Jia</h1>
-    </div>
+    <h1 ng-class="headerState" ng-click="setStartState()">Jacqueline Jia</h1>
 
   </div>
 

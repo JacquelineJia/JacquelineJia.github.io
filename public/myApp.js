@@ -1,9 +1,8 @@
 var app = angular.module('myApp', ['ngAnimate']);
 
 app.controller('myCtrl', function ($scope, $http, $sce) {
-
-  $scope.backgroundState= "background-image grayscale";
-  $scope.headerState= "name-header pink hover";
+  $scope.backgroundState = "background-image grayscale";
+  $scope.headerState = "name-header pink hover";
   $scope.menuState = "menu hid transition";
 
   $scope.modalAddress = "";
@@ -12,6 +11,13 @@ app.controller('myCtrl', function ($scope, $http, $sce) {
   $scope.modalIsImg = false;
   $scope.modalIsVideo = false;
   $scope.modalIsYoutube = false;
+
+  $scope.setStartState = function() {
+    $scope.backgroundState = "background-image";
+    $scope.headerState = "name-header purple transition";
+    $scope.menuState = "menu transitionFast";
+  };
+
   $scope.setModal = function(address, format) {
     $scope.modalAddress = address;
     $scope.showModal = true;
